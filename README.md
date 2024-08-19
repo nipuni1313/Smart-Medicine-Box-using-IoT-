@@ -44,6 +44,9 @@ To install and run this project, the following tools were installed:
    - **Adjust Settings:** Use the dashboard sliders to customize the Medibox settings for different medicines.
 
 ### Wokwi Simulation
+Simulating the Medibox functionality using Wokwi to test and demonstrate its features, including real-time monitoring and alarm settings.
+-![Wokwi simulation](images/wokwi1.png)
+-![Wokwi simulation](images/wokwi2.png)
 
 
 ## License
