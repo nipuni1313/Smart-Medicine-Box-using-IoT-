@@ -1,0 +1,7 @@
+LiquidCrystal I2C
+Adafruit GFX Library
+Adafruit SSD1306
+DHT sensor library for ESPx
+NTPClient
+ESP32Servo
+PubSubClient
