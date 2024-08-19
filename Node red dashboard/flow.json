@@ -1,0 +1,729 @@
+[
+    {
+        "id": "6a4d828f5a18e65d",
+        "type": "tab",
+        "label": "medi box",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9488c9d8b448216f",
+        "type": "mqtt in",
+        "z": "6a4d828f5a18e65d",
+        "name": "",
+        "topic": "LDR value",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "e794870d45f595e7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 100,
+        "wires": [
+            [
+                "5764e9720d844f27"
+            ]
+        ]
+    },
+    {
+        "id": "93331fc4b07d7174",
+        "type": "mqtt in",
+        "z": "6a4d828f5a18e65d",
+        "name": "",
+        "topic": "LDR high",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "e794870d45f595e7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 300,
+        "wires": [
+            [
+                "494a6532866c1d50"
+            ]
+        ]
+    },
+    {
+        "id": "754a6b217fdb2f67",
+        "type": "mqtt in",
+        "z": "6a4d828f5a18e65d",
+        "name": "",
+        "topic": "Tempreature",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "e794870d45f595e7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 520,
+        "wires": [
+            [
+                "178e48af285d5257"
+            ]
+        ]
+    },
+    {
+        "id": "bc51490f49d4ae97",
+        "type": "mqtt out",
+        "z": "6a4d828f5a18e65d",
+        "name": "",
+        "topic": "control_factor",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e794870d45f595e7",
+        "x": 980,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "1d9329273a19b2c6",
+        "type": "mqtt out",
+        "z": "6a4d828f5a18e65d",
+        "name": "",
+        "topic": "minimum angle",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e794870d45f595e7",
+        "x": 1000,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "c030f90c8cfaa77c",
+        "type": "debug",
+        "z": "6a4d828f5a18e65d",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "93f9b42aea3e89c8",
+        "type": "debug",
+        "z": "6a4d828f5a18e65d",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "05e14b933a9c9029",
+        "type": "debug",
+        "z": "6a4d828f5a18e65d",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "5764e9720d844f27",
+        "type": "delay",
+        "z": "6a4d828f5a18e65d",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 320,
+        "y": 100,
+        "wires": [
+            [
+                "c521f760840291e6",
+                "c030f90c8cfaa77c"
+            ]
+        ]
+    },
+    {
+        "id": "c521f760840291e6",
+        "type": "switch",
+        "z": "6a4d828f5a18e65d",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            },
+            {
+                "t": "null"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 530,
+        "y": 100,
+        "wires": [
+            [
+                "6e8f4e858ef124d3",
+                "5a0ce035a0e67cbf"
+            ],
+            [
+                "4ea37abbd348aa3b"
+            ]
+        ]
+    },
+    {
+        "id": "6e8f4e858ef124d3",
+        "type": "ui_gauge",
+        "z": "6a4d828f5a18e65d",
+        "name": "",
+        "group": "e1830ff51155e1de",
+        "order": 1,
+        "width": 6,
+        "height": 4,
+        "gtype": "gage",
+        "title": "highest light intensity gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 940,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "5a0ce035a0e67cbf",
+        "type": "ui_chart",
+        "z": "6a4d828f5a18e65d",
+        "name": "",
+        "group": "e1830ff51155e1de",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Light intensity chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 910,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4ea37abbd348aa3b",
+        "type": "ui_toast",
+        "z": "6a4d828f5a18e65d",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "Error Fetching Temperature Data!",
+        "topic": "",
+        "name": "Error Fetching Temperature Data!",
+        "x": 920,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "50bb8fd667beb8e1",
+        "type": "ui_toast",
+        "z": "6a4d828f5a18e65d",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "Error Fetching Temperature Data!",
+        "topic": "",
+        "name": "Error Fetching Temperature Data!",
+        "x": 940,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "178e48af285d5257",
+        "type": "delay",
+        "z": "6a4d828f5a18e65d",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 340,
+        "y": 520,
+        "wires": [
+            [
+                "93f9b42aea3e89c8",
+                "15b40ba982dbe317"
+            ]
+        ]
+    },
+    {
+        "id": "15b40ba982dbe317",
+        "type": "switch",
+        "z": "6a4d828f5a18e65d",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            },
+            {
+                "t": "null"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 570,
+        "y": 520,
+        "wires": [
+            [
+                "b5c19c8b5d16bbeb",
+                "8c8013a726885b2a"
+            ],
+            [
+                "50bb8fd667beb8e1"
+            ]
+        ]
+    },
+    {
+        "id": "b5c19c8b5d16bbeb",
+        "type": "ui_gauge",
+        "z": "6a4d828f5a18e65d",
+        "name": "",
+        "group": "f7cd2a0f48f2788e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temprature gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "26",
+        "seg2": "32",
+        "diff": false,
+        "className": "",
+        "x": 890,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "8c8013a726885b2a",
+        "type": "ui_chart",
+        "z": "6a4d828f5a18e65d",
+        "name": "",
+        "group": "f7cd2a0f48f2788e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Temprature chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 890,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "494a6532866c1d50",
+        "type": "delay",
+        "z": "6a4d828f5a18e65d",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 320,
+        "y": 300,
+        "wires": [
+            [
+                "92f849f8a92f112f",
+                "05e14b933a9c9029"
+            ]
+        ]
+    },
+    {
+        "id": "92f849f8a92f112f",
+        "type": "ui_text_input",
+        "z": "6a4d828f5a18e65d",
+        "name": "",
+        "label": ":",
+        "tooltip": "",
+        "group": "e1830ff51155e1de",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 910,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d874b308fa2de89d",
+        "type": "ui_dropdown",
+        "z": "6a4d828f5a18e65d",
+        "name": "",
+        "label": "Medicine Type Dropdown",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "a90c40b147ab90d8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "custom",
+                "value": "custom",
+                "type": "str"
+            },
+            {
+                "label": "Panadol",
+                "value": "Panadol",
+                "type": "str"
+            },
+            {
+                "label": "Domperidon",
+                "value": "Domperidon",
+                "type": "str"
+            },
+            {
+                "label": "Benflix",
+                "value": "Benflix",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 150,
+        "y": 840,
+        "wires": [
+            [
+                "94ebb61295132808",
+                "b2d223917697e6cc"
+            ]
+        ]
+    },
+    {
+        "id": "2d3fc4ffd0a0eaa6",
+        "type": "ui_slider",
+        "z": "6a4d828f5a18e65d",
+        "name": "",
+        "label": "controlling factor",
+        "tooltip": "",
+        "group": "a90c40b147ab90d8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "1",
+        "step": "0.001",
+        "className": "",
+        "x": 680,
+        "y": 880,
+        "wires": [
+            [
+                "bc51490f49d4ae97"
+            ]
+        ]
+    },
+    {
+        "id": "191c413ae77f27a4",
+        "type": "ui_slider",
+        "z": "6a4d828f5a18e65d",
+        "name": "",
+        "label": "minimum angel",
+        "tooltip": "",
+        "group": "a90c40b147ab90d8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "120",
+        "step": "1",
+        "className": "",
+        "x": 680,
+        "y": 780,
+        "wires": [
+            [
+                "1d9329273a19b2c6"
+            ]
+        ]
+    },
+    {
+        "id": "94ebb61295132808",
+        "type": "function",
+        "z": "6a4d828f5a18e65d",
+        "name": "function 1",
+        "func": "if(msg.payload==\"custom\"){\n    return {payload:30}\n}else if(msg.payload==\"Panadol\"){\n    return {payload:70}\n}else if(msg.payload==\"Domperidon\"){\n    return {payload:90}\n}else if(msg.payload==\"Benflix\"){\n    return {payload:120}\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 780,
+        "wires": [
+            [
+                "191c413ae77f27a4"
+            ]
+        ]
+    },
+    {
+        "id": "b2d223917697e6cc",
+        "type": "function",
+        "z": "6a4d828f5a18e65d",
+        "name": "function 2",
+        "func": "if(msg.payload==\"custom\"){\n    return {payload:0.75}\n}else if(msg.payload==\"Panadol\"){\n    return {payload:0.2}\n}else if(msg.payload==\"Domperidon\"){\n    return {payload:0.45}\n}else if(msg.payload==\"Benflix\"){\n    return {payload:0.8}\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 880,
+        "wires": [
+            [
+                "2d3fc4ffd0a0eaa6"
+            ]
+        ]
+    },
+    {
+        "id": "d3f5808af1c5a066",
+        "type": "ui_spacer",
+        "z": "6a4d828f5a18e65d",
+        "name": "spacer",
+        "group": "f49f0ca4a64d3b62",
+        "order": 3,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "e794870d45f595e7",
+        "type": "mqtt-broker",
+        "name": "Mosquitto Server",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "e1830ff51155e1de",
+        "type": "ui_group",
+        "name": "Light sensitivity",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f7cd2a0f48f2788e",
+        "type": "ui_group",
+        "name": "Tempreature",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a90c40b147ab90d8",
+        "type": "ui_group",
+        "name": "sliding window",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f49f0ca4a64d3b62",
+        "type": "ui_group",
+        "name": "Light sensitivity",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    }
+]
