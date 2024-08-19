@@ -9,8 +9,8 @@ Welcome to the Medibox IoT project repository. This project is designed to help 
 - [Schematics](#schematics)
 - [PCB](#PCB)
 - [Wokwi simulation](#Wokwi)
-- [Node red flow](#Node red flow)
-- [Node red Dashboard](#Node red dashboard)
+- [Node red flow](#Noderedflow)
+- [Node red Dashboard](#Nodereddashboard)
 - [License](#license)
 
 ## Introduction
