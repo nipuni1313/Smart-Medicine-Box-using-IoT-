@@ -9,6 +9,8 @@ Welcome to the Medibox IoT project repository. This project is designed to help 
 - [Schematics](#schematics)
 - [PCB](#PCB)
 - [Wokwi simulation](#Wokwi)
+- [Node red flow](#Node red flow)
+- [Node red Dashboard](#Node red dashboard)
 - [License](#license)
 
 ## Introduction
@@ -43,15 +45,29 @@ To install and run this project, the following tools were installed:
    - **Dashboard Setup:** Use Node-RED to monitor light intensity and control the shading window.
    - **Adjust Settings:** Use the dashboard sliders to customize the Medibox settings for different medicines.
 
-## Wokwi Simulation
+### Schematics
+### PCB
+### Node red flow
+The Node-RED flow is used to manage and visualize the Medibox functionality, including light intensity monitoring, alarm settings, and more. Below are examples of the Node-RED flow used in this project.
+
+
+![Node-RED Flow Diagram](images/node-red-flow.png)
+*Figure 2: Diagram of the Node-RED flow for controlling and monitoring the Medibox.*
+
+### Node red Dashboard
+Node-RED dashboard showcasing the Medibox control interface.
+
+![Node-RED Dashboard](images/node-red-dashboard.png)
+
+
+### Wokwi Simulation
 
 Simulate the Medibox functionality using Wokwi to test and demonstrate its features, including real-time monitoring and alarm settings.
 
-![Wokwi Simulation Overview](images/wokwi1.png)
-*Figure 1: Wokwi simulation overview of the Medibox project.*
-
+![Wokwi Simulation Overview](images/wokwi1)
 ![Wokwi Circuit Diagram](images/wokwi2.png)
-*Figure 2:  Wokwi simulation overview of the Medibox project.*
+
+
 
 
 
