@@ -51,13 +51,13 @@ To install and run this project, the following tools were installed:
 The Node-RED flow is used to manage and visualize the Medibox functionality, including light intensity monitoring, alarm settings, and more. Below are examples of the Node-RED flow used in this project.
 
 
-![Node-RED Flow Diagram](images/node-red-flow.png)
-*Figure 2: Diagram of the Node-RED flow for controlling and monitoring the Medibox.*
+![Node-RED Flow Diagram](images/node flow.png)
+
 
 ### Node red Dashboard
 Node-RED dashboard showcasing the Medibox control interface.
 
-![Node-RED Dashboard](images/node-red-dashboard.png)
+![Node-RED Dashboard](images/dash.png)
 
 
 ### Wokwi Simulation
