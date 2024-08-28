@@ -46,6 +46,8 @@ To install and run this project, the following tools were installed:
    - **Adjust Settings:** Use the dashboard sliders to customize the Medibox settings for different medicines.
 
 ### Schematics
+The schematic was drawn using EDA tool.
+![Schematics](images/Schematic of the Medi Box)
 ### PCB
 ### Node red flow
 The Node-RED flow is used to manage and visualize the Medibox functionality, including light intensity monitoring, alarm settings, and more. Below are examples of the Node-RED flow used in this project.
